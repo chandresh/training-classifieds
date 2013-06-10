@@ -79,8 +79,9 @@ User has many leads through adverts
 
 7. Signup / Login:
 
-- User model
-- signup form
+- User model: scaffold + added a password_digest field + has_secured_password
+- signup form - done ^^^
+
 - session controller
 - login form
 - links to signup & logout
