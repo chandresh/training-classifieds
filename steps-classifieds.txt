@@ -1,0 +1,68 @@
+Classifieds Website: minimal craigslist
+---------------------------------
+
+	- Users can signup
+	- Users can post advertisements
+	- Users can see contact requests on the ads
+	
+	- Admin can login
+	- Admin can approve the advertisements
+	- Admin can create categories
+	- Visitors can view the listings by category
+	- Visitors can search the listings
+	- Visitors can view details of the listings
+	- Visitors can contact the user who posted the ad by a 		contact form
+--------------------------------------------------
+
+User First Signs Up -> Post An Ad -> Admin Approves the ad -> Ad is displayed
+
+* 2 types of users
+
+* session/ db based login
+
+* signup
+
+* login
+
+* search
+
+* file upload
+
+--------------------------------------------------------------
+
+Models:
+
+User:
+	email
+	password
+	first_name
+	last_name
+	address:text
+
+Category
+	name
+
+Advert
+	title
+	image
+	description
+	contact_details
+	user_id
+	category_id
+
+Lead
+	name
+	email
+	phone
+	message
+	advert_id
+
+
+User has many adverts
+Category has many adverts
+Advert has many leads
+User has many leads through adverts
+
+------------------------------------------------------------
+
+
