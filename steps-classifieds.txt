@@ -34,9 +34,8 @@ Models:
 
 User:
 	email
-	password
-	first_name
-	last_name
+	password - virtual attribute
+	name	
 	address:text
 
 Category
@@ -64,5 +63,28 @@ Advert has many leads
 User has many leads through adverts
 
 ------------------------------------------------------------
+
+
+1. Plan for the models & model attributes + some workflow.
+
+2. Create a new rails projects
+
+3. New repo on github
+
+4. Chose a template + modify it if required.
+
+5. Use the template on layout.
+
+6. Create a root (adverts/index)
+
+7. Signup / Login:
+
+- User model
+- signup form
+- session controller
+- login form
+- links to signup & logout
+
+
 
 

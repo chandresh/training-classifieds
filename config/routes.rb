@@ -1,5 +1,8 @@
 Classifieds::Application.routes.draw do
 
+  resources :users
+
+
   get "adverts/index"
 
   root :to => 'adverts#index'
