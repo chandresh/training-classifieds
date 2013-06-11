@@ -89,16 +89,10 @@ rails g migration add_password_digest_to_users password_digest
 - session controller:
 	new, create & destroy
 - Create route for logout
-- create a helper method: current_user
+- create a helper_method: current_user in the application_controller
 - links to signup/login & logout
 
-8. Create a my account section for the users so that they can post an advert or see the past adverts
 
-9. Admin related stuff: admin login, admin approves the advert
-
-10. Work on displaying the adverts
-
-11. Contact form for the adverts
 
 ## Debug
 
@@ -122,5 +116,20 @@ group :production do
   gem 'pg'
 end
 
+#### Homework: ####  11 June 2013
+
+1. Practice the stuff we discussed.
+
+2. Create a new project and use devise gem to create complete user sign up & login.
+
+https://github.com/plataformatec/devise
+
 ##### Tomorrow ###########
 
+8. Create a my account section for the users so that they can post an advert or see the past adverts
+
+9. Admin related stuff: admin login, admin approves the advert
+
+10. Work on displaying the adverts
+
+11. Contact form for the adverts
