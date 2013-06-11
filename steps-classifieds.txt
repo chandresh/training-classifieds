@@ -79,7 +79,10 @@ User has many leads through adverts
 
 7. Signup / Login:
 
-- User model: scaffold + added a password_digest field + has_secured_password
+- User model: scaffold + add a password_digest field + has_secured_password
+
+rails g migration add_password_digest_to_users password_digest
+
 - Create route for login
 - signup form 
 - login form
@@ -96,6 +99,28 @@ User has many leads through adverts
 10. Work on displaying the adverts
 
 11. Contact form for the adverts
+
+## Debug
+
+1. Use puts
+
+2. Use pry-rails
+
+add to Gemfile
+put "binding.pry" wherever you want to explore the running code.
+
+Ctr-D to get out of pry and move to next binding.pry or normal.
+
+## Gemfile groups
+
+group :development do
+  gem 'pry-rails'
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 ##### Tomorrow ###########
 
