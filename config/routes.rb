@@ -7,6 +7,12 @@ Classifieds::Application.routes.draw do
 
   root :to => 'adverts#index'
 
+  controller :session do
+    get 'login' => :new
+    post 'login' => :create
+    get 'logout' => :destroy
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

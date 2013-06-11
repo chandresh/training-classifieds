@@ -69,7 +69,7 @@ User has many leads through adverts
 
 2. Create a new rails projects
 
-3. New repo on github
+3. New repo on Github
 
 4. Chose a template + modify it if required.
 
@@ -80,12 +80,22 @@ User has many leads through adverts
 7. Signup / Login:
 
 - User model: scaffold + added a password_digest field + has_secured_password
-- signup form - done ^^^
-
-- session controller
+- Create route for login
+- signup form 
 - login form
-- links to signup & logout
+- session controller:
+	new, create & destroy
+- Create route for logout
+- create a helper method: current_user
+- links to signup/login & logout
 
+8. Create a my account section for the users so that they can post an advert or see the past adverts
 
+9. Admin related stuff: admin login, admin approves the advert
 
+10. Work on displaying the adverts
+
+11. Contact form for the adverts
+
+##### Tomorrow ###########
 

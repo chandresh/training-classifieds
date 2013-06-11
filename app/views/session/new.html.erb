@@ -1,0 +1,9 @@
+<h1>Login</h1>
+<br>
+<br>
+
+<%= simple_form_for :session do |form| %>
+    <%= form.input :email %>
+    <%= form.input :password %>
+    <%= form.button :submit, "Login" %>
+<% end %>

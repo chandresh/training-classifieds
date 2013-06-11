@@ -1,0 +1,14 @@
+1. RepVista
+2. WordPress - How
+3. Stunguns
+4. SoapNuts - Stripe
+5. 
+
+
+if @user
+      @user.update_attributes(eamil: email, password: password)
+      @dealer = @user.dealers.first
+      @dealer.update_attributes(name: name, phone: phone)
+    else
+
+    end
