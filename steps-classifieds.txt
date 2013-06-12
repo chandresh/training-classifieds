@@ -156,7 +156,18 @@ https://github.com/plataformatec/devise
 
 #### Scaffold ####
 
-Use scaffold, but
+If you do any typo:
+
+--------------------------
+If the migration is already run:
+
+rake db:rollback
+--------------------------
+
+rails destroy scaffold Advert
+
+
+### Use scaffold, but ###
 
 1. Delete extra actions.
 
