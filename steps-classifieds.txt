@@ -124,15 +124,23 @@ end
 
 https://github.com/plataformatec/devise
 
-##### Tomorrow ###########
+############
 
-8. Create a my account section for the users so that they can post an adverts or see their past adverts
+8. Create a my account section for the users. The users can edit/view their account & only their account details.
 
-9. Admin related stuff: admin login, admin approves the advert
+9. Admin related stuff: admin login.
 
-10. Work on displaying the adverts
+10. Admin can manage users, can view/edit the details of any users.
 
-11. Contact form for the adverts
+11. Admin category management.
+
+12. Members can post an adverts or see their past adverts
+
+13. Admin approves the advert
+
+14. Work on displaying the adverts
+
+15. Contact form for the adverts
 
 #### Scaffold ####
 
@@ -150,3 +158,4 @@ resources :users, only: [:show, :new]
 
 @advert = Advert.new XXX Totally wrong
 @advert = current_user.adverts.new ## PERFECT!
+##### Tomorrow ###########
