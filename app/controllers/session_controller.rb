@@ -13,7 +13,7 @@ class SessionController < ApplicationController
     # if password is correct -> show a welcome message + redirect to account section
     if user and user.authenticate(session_user[:password])
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Logged in successfully."
+      redirect_to my_account_url, notice: "Logged in successfully."
 
     else
       # if there is no user by that email show error

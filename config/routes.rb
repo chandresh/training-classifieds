@@ -7,6 +7,8 @@ Classifieds::Application.routes.draw do
 
   root :to => 'adverts#index'
 
+  get 'my_account' => 'member#account'
+
   controller :session do
     get 'login' => :new
     post 'login' => :create

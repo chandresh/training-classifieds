@@ -5,6 +5,11 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def member_required
+    unless current_user
+      redirect_to :login, notice: "Please log in"
+    end
+  end
 
   def current_user
     # find the user by user_id stored in the session
