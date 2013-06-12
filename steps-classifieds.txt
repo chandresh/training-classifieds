@@ -142,11 +142,17 @@ https://github.com/plataformatec/devise
 
 ##### Tomorrow ###########
 
-14. Members can post an adverts or see their past adverts
+## Discussion on attr_accessible and why it is bad to add every field to it.
+
+## File uploads
+
+## Emails
+
+14. Members can post an adverts or see their past adverts => file upload
 
 15. Work on displaying the adverts
 
-16. Contact form for the adverts
+16. Contact form for the adverts => Emailing
 
 #### Scaffold ####
 
@@ -166,3 +172,5 @@ resources :users, only: [:show, :new]
 @advert = current_user.adverts.new ## PERFECT!
 
 5. Delete views that you don't require.
+
+6. SUPER IMPORTANT: check attr_accessible list
