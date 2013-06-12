@@ -126,7 +126,7 @@ https://github.com/plataformatec/devise
 
 ##### Tomorrow ###########
 
-8. Create a my account section for the users so that they can post an advert or see the past adverts
+8. Create a my account section for the users so that they can post an adverts or see their past adverts
 
 9. Admin related stuff: admin login, admin approves the advert
 
