@@ -1,5 +1,10 @@
 Classifieds::Application.routes.draw do
 
+  get "pages/home"
+
+  resources :adverts
+
+
   resources :categories
 
 
@@ -8,7 +13,7 @@ Classifieds::Application.routes.draw do
 
   get "adverts/index"
 
-  root :to => 'adverts#index'
+  root :to => 'pages#home'
 
   get 'my_account' => 'member#account'
 

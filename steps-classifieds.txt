@@ -43,7 +43,7 @@ Category
 
 Advert
 	title
-	image
+	image <-
 	description
 	contact_details
 	user_id

@@ -1,74 +1,29 @@
-<h1>All the Listings</h1>
-<br/>
-<br/>
-<h2>Real Estate</h2>
-<br/>
-<div class="advert">
-  <h3>I want to sell my house</h3>
-  <br/>
-  <%= image_tag "img02.jpg", class: "alignleft border" %>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  <br/>
-  <a>View details</a>
-</div>
+<h1>Listing adverts</h1>
 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Contact details</th>
+    <th>Category</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
 
-<div class="advert">
-  <h3>I want to sell my house</h3>
-  <br/>
-  <%= image_tag "img02.jpg", class: "alignleft border" %>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  <br/>
-  <a>View details</a>
-</div>
+<% @adverts.each do |advert| %>
+  <tr>
+    <td><%= advert.title %></td>
+    <td><%= advert.description %></td>
+    <td><%= advert.contact_details %></td>
+    <td><%= advert.category_id %></td>
+    <td><%= link_to 'Show', advert %></td>
+    <td><%= link_to 'Edit', edit_advert_path(advert) %></td>
+    <td><%= link_to 'Destroy', advert, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
 
-<br/>
-<br/>
-<h2>Real Estate</h2>
-<br/>
-<div class="advert">
-  <h3>I want to sell my house</h3>
-  <br/>
-  <%= image_tag "img02.jpg", class: "alignleft border" %>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  <br/>
-  <a>View details</a>
-</div>
+<br />
 
-
-<div class="advert">
-  <h3>I want to sell my house</h3>
-  <br/>
-  <%= image_tag "img02.jpg", class: "alignleft border" %>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  I want to sell my house <br/>
-  <br/>
-  <a>View details</a>
-</div>
+<%= link_to 'New Advert', new_advert_path %>

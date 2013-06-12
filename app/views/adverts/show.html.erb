@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @advert.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @advert.description %>
+</p>
+
+<p>
+  <b>Contact details:</b>
+  <%= @advert.contact_details %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @advert.category_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_advert_path(@advert) %> |
+<%= link_to 'Back', adverts_path %>
