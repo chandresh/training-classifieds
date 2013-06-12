@@ -133,3 +133,20 @@ https://github.com/plataformatec/devise
 10. Work on displaying the adverts
 
 11. Contact form for the adverts
+
+#### Scaffold ####
+
+Use scaffold, but
+
+1. Delete extra actions.
+
+2. Disable extra routes. -> 404 error. 
+
+resources :users, only: [:show, :new]
+
+3. Use before_filters to protect member or admin only stuff
+
+4. MOST IMPORTANT: Always access stuff from current_user (or similar) for the logged in users.
+
+@advert = Advert.new XXX Totally wrong
+@advert = current_user.adverts.new ## PERFECT!

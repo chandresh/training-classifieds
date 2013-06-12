@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_filter :member_required, only: [:edit, :update, :show]
+
   # GET /users
   # GET /users.json
   def index
@@ -34,7 +37,7 @@ class UsersController < ApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   # POST /users
@@ -44,7 +47,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to :root, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
@@ -56,7 +59,7 @@ class UsersController < ApplicationController
   # PUT /users/1
   # PUT /users/1.json
   def update
-    @user = User.find(params[:id])
+    @user = current_user
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
