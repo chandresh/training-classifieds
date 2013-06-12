@@ -48,6 +48,7 @@ Advert
 	contact_details
 	user_id
 	category_id
+	approved:boolean
 
 Lead
 	name
@@ -134,13 +135,18 @@ https://github.com/plataformatec/devise
 
 11. Admin category management.
 
-12. Members can post an adverts or see their past adverts
+12. Admin can manage/post adverts
 
 13. Admin approves the advert
+	added an approved field to adverts
 
-14. Work on displaying the adverts
+##### Tomorrow ###########
 
-15. Contact form for the adverts
+14. Members can post an adverts or see their past adverts
+
+15. Work on displaying the adverts
+
+16. Contact form for the adverts
 
 #### Scaffold ####
 
@@ -158,4 +164,5 @@ resources :users, only: [:show, :new]
 
 @advert = Advert.new XXX Totally wrong
 @advert = current_user.adverts.new ## PERFECT!
-##### Tomorrow ###########
+
+5. Delete views that you don't require.

@@ -4,6 +4,7 @@
     <div class="form-inputs">
       <% if admin? %>
           <%= f.association :user %>
+          <%= f.input :approved %>
       <% end %>
       <%= f.input :title %>
       <%= f.input :description %>
