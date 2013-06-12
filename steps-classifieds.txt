@@ -125,6 +125,16 @@ end
 
 https://github.com/plataformatec/devise
 
+## adding a Gem requires ###
+
+Reading the wiki of the Gem at Github
+Googling for errors & checking stackoverflow
+Going through Railscasts if any
+-- sometimes, 
+1. Posting the issue.
+2. even fixing bugs in the Gem 
+… and become a contributor as a side-effect --
+
 ############
 
 8. Create a my account section for the users. The users can edit/view their account & only their account details.
