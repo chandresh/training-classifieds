@@ -43,7 +43,11 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(params[:user])
+    if admin?
+      @user = User.new(params[:user], as: :admin)
+    else
+      @user = User.new(params[:user])
+    end
 
     respond_to do |format|
       if @user.save

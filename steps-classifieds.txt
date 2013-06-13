@@ -154,7 +154,7 @@ Going through Railscasts if any
 
 ## Discussion on attr_accessible and why it is bad to add every field to it.
 
-## File uploads
+## File uploads: Paperclip Gem
 
 ## Emails
 
