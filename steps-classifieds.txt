@@ -157,7 +157,7 @@ Going through Railscasts if any
 ## File uploads: Paperclip Gem
 - Install ImageMagick
 - Add paperclip to Gemfile
-- Bundle
+- Bundle & then restart the server
 - rails generate paperclip advert image
 - in the model: advert.rb
 attr_accessible  :image
@@ -178,6 +178,9 @@ has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100
 15. Work on displaying the adverts
 
 16. Contact form for the adverts => Emailing
+
+Homework
+Try https://github.com/carrierwaveuploader/carrierwave
 
 #### Scaffold ####
 
