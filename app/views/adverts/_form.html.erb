@@ -1,4 +1,4 @@
-<%= simple_form_for(@advert) do |f| %>
+<%= simple_form_for @advert, :html => { :multipart => true } do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
@@ -7,6 +7,7 @@
           <%= f.input :approved %>
       <% end %>
       <%= f.input :title %>
+      <%= f.input :image %>
       <%= f.input :description %>
       <%= f.input :contact_details %>
       <%= f.association :category, as: :radio_buttons %>

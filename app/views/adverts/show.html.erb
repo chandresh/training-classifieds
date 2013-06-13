@@ -4,6 +4,9 @@
   <b>Title:</b>
   <%= @advert.title %>
 </p>
+<p>
+  <%= image_tag @advert.image.url(:medium) %>
+</p>
 
 <p>
   <b>Description:</b>

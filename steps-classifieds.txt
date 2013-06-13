@@ -155,6 +155,21 @@ Going through Railscasts if any
 ## Discussion on attr_accessible and why it is bad to add every field to it.
 
 ## File uploads: Paperclip Gem
+- Install ImageMagick
+- Add paperclip to Gemfile
+- Bundle
+- rails generate paperclip advert image
+- in the model: advert.rb
+attr_accessible  :image
+has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+- rake db:migrate
+- <%= simple_form_for @advert, :html => { :multipart => true } do |f| %>
+- <%= f.input :image %>
+- To access the image:
+<%= image_tag @advert.image %>
+<%= image_tag @advert.image.url(:medium) %>
+<%= image_tag @advert.image.url(:thumb) %>
+
 
 ## Emails
 

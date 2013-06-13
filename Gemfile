@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 gem 'simple_form'
 
+gem "paperclip"
+
 group :development do
   gem 'pry-rails'
 end
