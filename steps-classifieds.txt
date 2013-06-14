@@ -150,8 +150,6 @@ Going through Railscasts if any
 13. Admin approves the advert
 	added an approved field to adverts
 
-##### Tomorrow ###########
-
 ## Discussion on attr_accessible and why it is bad to add every field to it.
 
 ## File uploads: Paperclip Gem
