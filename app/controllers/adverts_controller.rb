@@ -85,10 +85,4 @@ class AdvertsController < ApplicationController
     end
   end
 
-  def owner_of?(object)
-    current_user && object.user == current_user
-  end
-
-  helper_method :owner_of?
-
 end

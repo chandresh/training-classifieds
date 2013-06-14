@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :adverts
+  has_many :leads, through: :adverts
 
 end

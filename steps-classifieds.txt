@@ -175,7 +175,17 @@ has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100
 
 15. Work on displaying the adverts
 
-16. Contact form for the adverts => Emailing
+16. Contact form for the adverts
+
+17. Using hidden input to send info
+
+18. hide links & pages based on if the user is owner of the ad or not.
+
+19. has many through 
+
+20. Mailer + letter_opener gem
+
+
 
 Homework
 Try https://github.com/carrierwaveuploader/carrierwave

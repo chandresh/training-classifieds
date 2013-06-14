@@ -9,7 +9,6 @@
     <th>Advert</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @leads.each do |lead| %>
@@ -18,14 +17,9 @@
     <td><%= lead.email %></td>
     <td><%= lead.phone %></td>
     <td><%= lead.message %></td>
-    <td><%= lead.advert_id %></td>
+    <td><%= lead.advert.title %></td>
     <td><%= link_to 'Show', lead %></td>
-    <td><%= link_to 'Edit', edit_lead_path(lead) %></td>
     <td><%= link_to 'Destroy', lead, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Lead', new_lead_path %>

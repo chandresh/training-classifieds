@@ -2,23 +2,11 @@ class LeadsController < ApplicationController
   # GET /leads
   # GET /leads.json
   def index
-    @leads = Lead.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @leads }
-    end
+    @leads = current_user.leads
   end
 
-  # GET /leads/1
-  # GET /leads/1.json
   def show
     @lead = Lead.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @lead }
-    end
   end
 
   # GET /leads/new
@@ -46,6 +34,7 @@ class LeadsController < ApplicationController
     respond_to do |format|
       if @lead.save
         format.html { redirect_to @lead, notice: 'Thanks for submitting your inquiry. We will get back to you soon.' }
+        UserMailer.lead_email(@lead).deliver
         format.json { render json: @lead, status: :created, location: @lead }
       else
         format.html { render action: "new" }

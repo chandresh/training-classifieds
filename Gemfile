@@ -13,6 +13,7 @@ gem "paperclip"
 
 group :development do
   gem 'pry-rails'
+  gem "letter_opener"
 end
 
 

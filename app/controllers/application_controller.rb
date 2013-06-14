@@ -28,4 +28,11 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+
+  def owner_of?(object)
+    current_user && object.user == current_user
+  end
+
+  helper_method :owner_of?
+
 end
