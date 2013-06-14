@@ -1,11 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Title:</b>
+<h1>
   <%= @advert.title %>
-</p>
+</h1>
+<br/>
 <p>
-  <%= image_tag @advert.image%>
+  <%= image_tag @advert.image %>
 </p>
 
 <p>
@@ -20,9 +18,13 @@
 
 <p>
   <b>Category:</b>
-  <%= @advert.category_id %>
+  <%= @advert.category.name %>
 </p>
 
+<% if admin? || owner_of?(@advert) %>
+    <%= link_to 'Edit', edit_advert_path(@advert) %>
+<% end %>
 
-<%= link_to 'Edit', edit_advert_path(@advert) %> |
-<%= link_to 'Back', adverts_path %>
+<h2>Contact The Owner</h2>
+
+<%= render "leads/form" %>

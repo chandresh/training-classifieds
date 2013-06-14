@@ -1,5 +1,8 @@
 Classifieds::Application.routes.draw do
 
+  resources :leads
+
+
   get "pages/home"
 
   resources :adverts

@@ -1,46 +1,40 @@
 class AdvertsController < ApplicationController
+
+  before_filter :member_required, except: [:show]
+
+  before_filter :set_advert, except: [:show]
+
   # GET /adverts
   # GET /adverts.json
   def index
-    @adverts = Advert.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @adverts }
-    end
+    @adverts = @advert_class.all
   end
 
   # GET /adverts/1
   # GET /adverts/1.json
   def show
     @advert = Advert.find(params[:id])
+    @lead = @advert.leads.new
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @advert }
-    end
+    redirect_to :root if !@advert.approved? and !owner_of?(@advert)
+
   end
 
   # GET /adverts/new
   # GET /adverts/new.json
   def new
-    @advert = Advert.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @advert }
-    end
+    @advert = @advert_class.new
   end
 
   # GET /adverts/1/edit
   def edit
-    @advert = Advert.find(params[:id])
+    @advert = @advert_class.find(params[:id])
   end
 
   # POST /adverts
   # POST /adverts.json
   def create
-    @advert = Advert.new(params[:advert])
+    @advert = @advert_class.new(params[:advert])
 
     respond_to do |format|
       if @advert.save
@@ -56,7 +50,7 @@ class AdvertsController < ApplicationController
   # PUT /adverts/1
   # PUT /adverts/1.json
   def update
-    @advert = Advert.find(params[:id])
+    @advert = @advert_class.find(params[:id])
 
     respond_to do |format|
       if @advert.update_attributes(params[:advert])
@@ -72,7 +66,7 @@ class AdvertsController < ApplicationController
   # DELETE /adverts/1
   # DELETE /adverts/1.json
   def destroy
-    @advert = Advert.find(params[:id])
+    @advert = @advert_class.find(params[:id])
     @advert.destroy
 
     respond_to do |format|
@@ -80,4 +74,21 @@ class AdvertsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  private
+
+  def set_advert
+    if admin?
+      @advert_class = Advert
+    else
+      @advert_class = current_user.adverts
+    end
+  end
+
+  def owner_of?(object)
+    current_user && object.user == current_user
+  end
+
+  helper_method :owner_of?
+
 end
